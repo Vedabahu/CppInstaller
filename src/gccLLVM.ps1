@@ -2,6 +2,11 @@ clear
 # Used for super fast file extraction
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 
+# Delete previously existing mingw installation which was installed using this script
+if (Test-Path "C:\mingw") {
+    Remove-Item -Paht "C:\mingw" -Recurse -Force
+}
+
 # Setting the directory as temp
 cd $env:TEMP
 
