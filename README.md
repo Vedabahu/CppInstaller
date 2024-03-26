@@ -9,4 +9,6 @@ This is still a new script and is not yet meature enough. I will develope it fur
 
 ## Usage
 
-- `irm https://raw.githubusercontent.com/Vedabahu/CppInstaller/main/src/gcc.ps1 | iex`
+You have 2 options. You can choose `gcc with clang` or `only gcc`. If you don't know what you are doing, choose `only gcc`.
+
+- `irm https://raw.githubusercontent.com/Vedabahu/CppInstaller/main/src/run.ps1 | iex`
