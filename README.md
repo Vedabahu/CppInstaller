@@ -9,4 +9,4 @@ This is still a new script and is not yet meature enough. I will develope it fur
 
 ## Usage
 
-- Download the [`gcc.bat`](/src/gcc.bat) and run it.
+- `irm https://raw.githubusercontent.com/Vedabahu/CppInstaller/main/src/gcc.ps1 | iex`
