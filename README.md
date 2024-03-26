@@ -11,4 +11,12 @@ This is still a new script and is not yet meature enough. I will develope it fur
 
 You have 2 options. You can choose `gcc with clang` or `only gcc`. If you don't know what you are doing, choose `only gcc`.
 
+- Open Powershell. (Not cmd or command prompt)
 - `irm https://raw.githubusercontent.com/Vedabahu/CppInstaller/main/src/run.ps1 | iex`
+
+### Warning
+
+For those who know what they are doing, by not installing the LLVM part, you will not get the applications like:
+
+- clangd
+- clang-format etc.
