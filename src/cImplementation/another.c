@@ -2,12 +2,16 @@
 #include <stdlib.h>
 
 void installGCC() {
-    system("posershell -Command \"irm https://github.com/Vedabahu/CppInstaller/raw/main/src/gcc.ps1 | iex\"");
+    system("posershell -Command \"irm https://raw.githubusercontent.com/Vedabahu/CppInstaller/raw/main/src/gcc.ps1 | "
+           "iex\"");
+    printf("Thank You for using me!! Bye");
     return;
 }
 
 void installGCCandLLVM() {
-    system("posershell -Command \"irm https://github.com/Vedabahu/CppInstaller/raw/main/src/gccLLVM.ps1 | iex\"");
+    system("posershell -Command \"irm https://raw.githubusercontent.com/Vedabahu/CppInstaller/raw/main/src/gccLLVM.ps1 "
+           "| iex\"");
+    printf("Thank You for using me!! Bye");
     return;
 }
 
@@ -33,12 +37,10 @@ int main() {
         switch (i) {
             case 1:
                 installGCC();
-                printf("Thank You for using me!! Bye");
                 exit(0);
                 break;
             case 2:
                 installGCCandLLVM();
-                printf("Thank You for using me!! Bye");
                 exit(0);
                 break;
             case 3: exit(0);
