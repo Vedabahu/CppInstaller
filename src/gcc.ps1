@@ -8,7 +8,7 @@ cd $env:TEMP
 # Speeds up the download by A LOT
 $ProgressPreference = 'SilentlyContinue'
 
-echo "Downloading All the Gcc packages along with LLVM"
+echo "Downloading Only Gcc and some additional packages"
 
 # Downloading based on 64bit or 32bit system
 if ([System.Environment]::Is64BitOperatingSystem) {
@@ -21,7 +21,7 @@ echo "Download Complete"
 
 # Extracting the File
 echo "Extracting the File"
-[System.IO.Compression.ZipFile]::ExtractToDirectory("$env:TEMP\mingw.zip", "C:\mingw", $true)
+[System.IO.Compression.ZipFile]::ExtractToDirectory("$env:TEMP\mingw.zip", "C:\mingw")
 echo "Extraction Complete"
 
 
