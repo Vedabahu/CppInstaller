@@ -12,9 +12,9 @@ echo "Downloading All the Gcc packages along with LLVM"
 
 # Downloading based on 64bit or 32bit system
 if ([System.Environment]::Is64BitOperatingSystem) {
-    Invoke-WebRequest -Uri "https://github.com/brechtsanders/winlibs_mingw/releases/download/13.2.0posix-17.0.6-11.0.1-ucrt-r5/winlibs-x86_64-posix-seh-gcc-13.2.0-mingw-w64ucrt-11.0.1-r5.zip" -OutFile "mingw.zip"
+	Invoke-WebRequest -Uri "https://github.com/brechtsanders/winlibs_mingw/releases/download/13.2.0posix-17.0.6-11.0.1-ucrt-r5/winlibs-x86_64-posix-seh-gcc-13.2.0-llvm-17.0.6-mingw-w64ucrt-11.0.1-r5.zip" -OutFile "mingw.zip"
 } else {
-    Invoke-WebRequest -Uri "https://github.com/brechtsanders/winlibs_mingw/releases/download/13.2.0posix-17.0.6-11.0.1-ucrt-r5/winlibs-i686-posix-dwarf-gcc-13.2.0-mingw-w64ucrt-11.0.1-r5.zip" -OutFile "mingw.zip"
+	Invoke-WebRequest -Uri "https://github.com/brechtsanders/winlibs_mingw/releases/download/13.2.0posix-17.0.6-11.0.1-ucrt-r5/winlibs-i686-posix-dwarf-gcc-13.2.0-llvm-17.0.6-mingw-w64ucrt-11.0.1-r5.zip" -OutFile "mingw.zip"
 }
 
 echo "Download Complete"
@@ -30,6 +30,6 @@ $pathList = $currentPath -split ";"
 $destinationFolder = "C:\mingw\mingw64\bin"
 
 if (!($pathList -contains $destinationFolder)) {
-    $newPath = "$currentPath;$destinationFolder"
-    [Environment]::SetEnvironmentVariable("PATH", $newPath, "User") 
+	$newPath = "$currentPath;$destinationFolder"
+	[Environment]::SetEnvironmentVariable("PATH", $newPath, "User")	
 }
