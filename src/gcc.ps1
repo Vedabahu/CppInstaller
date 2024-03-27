@@ -4,7 +4,7 @@ Add-Type -AssemblyName System.IO.Compression.FileSystem
 
 # Delete previously existing mingw installation which was installed using this script
 if (Test-Path "C:\mingw") {
-    Remove-Item -Paht "C:\mingw" -Recurse -Force
+    Remove-Item -Path "C:\mingw" -Recurse -Force
 }
 
 # Setting the directory as temp
